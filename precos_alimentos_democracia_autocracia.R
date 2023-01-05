@@ -77,7 +77,8 @@ ggplot(prec2, aes(x = Year, y = prec_alim,
 ggplot(prec3, aes(x = Year, y = prec_alim,
                   group = Entity, color = Entity)) +
   geom_line(size = 2) +
-  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00')) +
+  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00'),
+                     labels = c("Brasil", "China", "Estados Unidos")) +
   labs(x = "Tempo (anos)", 
        y = "População sem recursos\n para alimentação (%)",
        color = "Países") +
