@@ -6,6 +6,17 @@
 
 # Sobre os dados ---------------------------------------------------------------------------------------------------------------------------
 
+### Preços de alimentos se refere ao preço médio de determinados alimentos no mundo e entre
+### países. 
+
+### O preço de mercadorias não apenas promove um importante indicador do balanço entre produção
+### da agricultura e demanda do mercado, mas também tem forte impacto sobre acessibilidade aos 
+### alimentos e renda. Preço dos alimentos não apenas influencia poder de compra do consumidor,
+### mas também influencia a renda de agricultores e produtores. Países de renda baixa ou média
+### em particular, uma grande parte da população é empregada na agricultura. Produtores 
+### tipicamente se beneficiam do mais alto preço dos alimentos. O mercado de alimentos, pode 
+### portanto ter um forte impacto no acesso aos alimentos, na fome, na subnutrição e na qualidade
+### da dieta.
 
 # Carregar pacotes -------------------------------------------------------------------------------------------------------------------------
 
