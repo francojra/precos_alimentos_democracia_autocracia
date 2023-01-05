@@ -28,10 +28,32 @@ preco <- preco %>%
   view()
 
 prec1 <- preco %>%
-  filter(Entity %in% c("United States", "Germany", "Japan",
-                       "China")) %>%
+  filter(Entity %in% c("United States", "Germany", "Japan", "China")) %>%
   group_by(Entity) %>%
   summarise(media = mean(prec_alim),
             sd = sd(prec_alim), n = n(),
             se = sd/sqrt(n)) %>%
   view()
+
+prec2 <- preco %>%
+  filter(Entity %in% c("United States", "Germany", "Japan", "China")) %>%
+  view()
+
+prec3 <- preco %>%
+  filter(Entity %in% c("United States", "Brazil", "China")) %>%
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
+
+c4a("safe", 4)
+
+ggplot(prec1, aes(x = fct_reorder(Entity, media), y = media, fill = Entity)) +
+  geom_col(width = 0.9) +
+  geom_errorbar(aes(ymin = media - se, ymax = media + se),
+                width = 0.2, size = 0.9) +
+  scale_fill_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733")) +
+  scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  labs(x = "Países", y = "População sem recursos\n para alimentação (%)") +
+  theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
+  theme(legend.position = "none", axis.text = element_text(color = "black"))
