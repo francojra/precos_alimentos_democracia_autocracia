@@ -65,9 +65,23 @@ ggplot(prec2, aes(x = Year, y = prec_alim,
   geom_point(shape = 15, size = 2.5) +
   geom_line(size = 1.2) +
   scale_color_manual(values = c("#88CCEE", "#CC6677",
-                                "#DDCC77", "#117733")) +
+                                "#DDCC77", "#117733"),
+                                labels = c("China", "Alemanha",
+                                           "Japão", "Estados Unidos")) +
   labs(x = "Tempo (anos)", 
        y = "População sem recursos\n para alimentação (%)",
        color = "Países") +
   theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
   theme(axis.text = element_text(color = "black"))
+
+ggplot(prec3, aes(x = Year, y = prec_alim,
+                  group = Entity, color = Entity)) +
+  geom_line(size = 2) +
+  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00')) +
+  labs(x = "Tempo (anos)", 
+       y = "População sem recursos\n para alimentação (%)",
+       color = "Países") +
+  theme_light() +
+  theme(axis.title = element_text(size = 18),
+        axis.text = element_text(color = "black", size = 15),
+        legend.text = element_text(size = 12))
